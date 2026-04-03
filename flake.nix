@@ -16,8 +16,8 @@
     in
     {
       packages.${system} = rec {
-        loop = pkgs.callPackage ./loop.nix { };
-        default = loop;
+        loop-desktop = pkgs.callPackage ./loop-desktop.nix { };
+        default = loop-desktop;
       };
     };
 }
