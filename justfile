@@ -4,8 +4,8 @@ set quiet := true
 set shell := ["bash", "-eu", "-o", "pipefail", "-c"]
 
 pull_appimage version:
-  wget -O "loop-desktop-{{version}}-linux-x86_64.AppImage" \
-    "https://artifacts.wilix.dev/repository/loop-files/loop-{{version}}/loop-desktop-{{version}}-linux-x86_64.AppImage"
+  wget2 --force-progress -O "loop-desktop-{{version}}-linux-x86_64.AppImage" \
+    "https://artifacts.wilix.dev/repository/loop-files/loop-{{version}}/loop-desktop-{{version}}-linux-x86_64.AppImage" >&2
 
   nix hash file "loop-desktop-{{version}}-linux-x86_64.AppImage"
 
