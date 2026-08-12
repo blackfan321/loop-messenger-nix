@@ -29,7 +29,7 @@ nix profile install github:blackfan321/loop-messenger-nix
       url = "github:blackfan321/loop-messenger-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-  }
+  };
 
   outputs = { nixpkgs, loop-messenger, ... }: {
     nixosConfigurations.hostname = nixpkgs.lib.nixosSystem {
