@@ -2,7 +2,7 @@
 ''
   install -m 444 -D ${appimageContents}/${desktopFile} $out/share/applications/${pname}.desktop
   substituteInPlace $out/share/applications/${pname}.desktop \
-    --replace 'Exec=AppRun' 'Exec=${pname}' \
-    --replace 'StartupWMClass=LOOP' 'StartupWMClass=Loop'
+    --replace-fail 'Exec=AppRun' 'Exec=${pname}' \
+    --replace-fail 'StartupWMClass=LOOP' 'StartupWMClass=Loop'
   cp -r ${appimageContents}/usr/share/icons $out/share
 ''
