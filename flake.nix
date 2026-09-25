@@ -3,21 +3,40 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    git-hooks = {
+      url = "github:cachix/git-hooks.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
-    { self, nixpkgs, ... }:
-    let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
-    in
-    {
-      packages.${system} = rec {
-        loop-desktop = pkgs.callPackage ./loop-desktop.nix { };
-        default = loop-desktop;
-      };
+    inputs@{ flake-parts, nixpkgs, ... }:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        ./checks.nix
+        ./devshell.nix
+      ];
+
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "aarch64-darwin"
+      ];
+
+      perSystem =
+        { system, ... }:
+        let
+          pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+          };
+        in
+        {
+          packages = rec {
+            loop-desktop = pkgs.callPackage ./loop-desktop.nix { };
+            default = loop-desktop;
+          };
+        };
     };
 }
