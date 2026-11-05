@@ -1,0 +1,47 @@
+{
+    "loop-darwin": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "loop-darwin",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-RW7GIybAqBoTbGlIxxDx5Qt31kN6sJYhm5eiS529jhE=",
+            "type": "url",
+            "url": "https://artifacts.wilix.dev/repository/loop-files/loop-6.0.4/loop-desktop-6.0.4-mac-arm64.dmg"
+        },
+        "version": "6.0.4"
+    },
+    "loop-linux-aarch64": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "loop-linux-aarch64",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-9yoMxQoOM3fJFBO0AxJTbZt5Ky6sVvAkLE3BctfMtNY=",
+            "type": "url",
+            "url": "https://artifacts.wilix.dev/repository/loop-files/loop-6.0.4/loop-desktop-6.0.4-linux-arm64.AppImage"
+        },
+        "version": "6.0.4"
+    },
+    "loop-linux-x86_64": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "loop-linux-x86_64",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-Z3zFxqLlS2/ISVMAkYiTEzZiS4PoHaCxhnaLTVXqhdw=",
+            "type": "url",
+            "url": "https://artifacts.wilix.dev/repository/loop-files/loop-6.0.4/loop-desktop-6.0.4-linux-x86_64.AppImage"
+        },
+        "version": "6.0.4"
+    }
+}
