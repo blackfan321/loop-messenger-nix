@@ -3,8 +3,8 @@
 Nix flake for [Loop Messenger](https://loop.ru/).
 Repackages the official Linux and macOS builds.
 
-[![linux](https://img.shields.io/badge/linux-6.0.3-informational)](./loop-desktop.nix)
-[![macOS](https://img.shields.io/badge/macOS-6.0.3-informational)](./loop-desktop.nix)
+[![linux](https://img.shields.io/badge/linux-6.0.4-informational)](./loop-desktop.nix)
+[![macOS](https://img.shields.io/badge/macOS-6.0.4-informational)](./loop-desktop.nix)
 [![CI](https://img.shields.io/github/actions/workflow/status/blackfan321/loop-messenger-nix/update.yml?label=CI)](https://github.com/blackfan321/loop-messenger-nix/actions/workflows/update.yml)
 
 ## Quick Start

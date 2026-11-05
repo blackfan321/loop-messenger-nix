@@ -10,21 +10,21 @@ let
   pname = "loop-desktop";
 
   linuxSources = {
-    version = "6.0.3";
+    version = "6.0.4";
     x86_64-linux = {
       suffix = "x86_64";
-      hash = "sha256-zGWKlY6XwuL0e2mDpB/1t0UnW73bhCPcg6XkBJBCEFY=";
+      hash = "sha256-Z3zFxqLlS2/ISVMAkYiTEzZiS4PoHaCxhnaLTVXqhdw=";
     };
     aarch64-linux = {
       suffix = "arm64";
-      hash = "sha256-7EfTWiWsIoaUJDqumRplkK4LmWZkUb/Q/Tz8Hj7PHrw=";
+      hash = "sha256-9yoMxQoOM3fJFBO0AxJTbZt5Ky6sVvAkLE3BctfMtNY=";
     };
   };
 
   darwinSources = {
-    version = "6.0.3";
+    version = "6.0.4";
     aarch64-darwin = {
-      hash = "sha256-4MxWBLplF4sQZHaebXLTjVlEv0b7qH6BA0Q4c7LYzkk=";
+      hash = "sha256-RW7GIybAqBoTbGlIxxDx5Qt31kN6sJYhm5eiS529jhE=";
     };
   };
 
